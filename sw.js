@@ -1,14 +1,14 @@
 var version = "4.0::";
 var offlineResources = [
-	"/offline/",
+	"/offline/index.html",
 	"/img/logo.png",
 	"/css/index.css",
 	"/js/index.js"
 ];
 self.addEventListener("install", function(event) {
+	console.log("install from service worker");
 	event.waitUntil(
-		caches
-			.open(version + "static")
+		caches.open(version + "static")
 			.then(function(cache) {
 				cache.addAll(offlineResources);
 			})
@@ -16,6 +16,7 @@ self.addEventListener("install", function(event) {
 });
 
 self.addEventListener("activate", function(event) {
+	console.log("activate from service worker");
 	event.waitUntil(
 		caches.keys().then(function(keys) {
 			return Promise.all(keys
@@ -35,6 +36,7 @@ function isOfflineOrigin(origin) {
 }
 
 self.addEventListener("fetch", function(event) {
+	console.log("fetch from service worker");
 	var request = event.request;
 	var url = new URL(request.url);
 
