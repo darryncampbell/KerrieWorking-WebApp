@@ -1,0 +1,15 @@
+{
+  "short_name": "KS Working",
+  "name": "Kerrie Working Times",
+  "theme_color": "#0181E2",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "200x200",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "portrait"
+}
