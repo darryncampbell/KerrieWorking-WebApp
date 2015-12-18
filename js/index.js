@@ -46,7 +46,7 @@ function ajaxRequest(guid, url, method, parameters, async, functionToCall, parse
 //			  xmlDoc.loadXML(response);
 //			  }
 			  var guidNode = xmlDoc.getElementById('OnlineBookingGuid');
-			  console.log(guidNode.value);
+//			  console.log(guidNode.value);
 			  if (guidNode != null){
 				g_guid = guidNode.value;
 				guid = g_guid;
