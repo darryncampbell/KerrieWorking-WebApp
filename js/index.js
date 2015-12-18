@@ -216,6 +216,18 @@ if (window.DOMParser)
 function pageLoad()
 {
 	setSpinning();
+
+	//  Service Worker
+	if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('/sw.js').then(function(registration) {
+		// Registration was successful
+		console.log('ServiceWorker registration successful with scope: ',    registration.scope);
+	}).catch(function(err) {
+		// registration failed :(
+		console.log('ServiceWorker registration failed: ', err);
+	});
+	}
+
 	//var phoneModel = device.model;
 //	console.log("Phone Model: " + phoneModel);
 //	document.getElementById("day0Heading").innerHTML = phoneModel;
