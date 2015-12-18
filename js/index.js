@@ -68,20 +68,20 @@ function test()
 
 function getGuid()
 {
-	var url  = "http://book.gettimely.com/Booking/Location/bodyimagebeautysalons";
+	var url  = "https://book.gettimely.com/Booking/Location/bodyimagebeautysalons";
 	var guid = "init";
 	ajaxRequest(guid, url, "GET", "", true, postSalon);
 }
 
 function postSalon(guid)
 {
-	var url  = "http://book.gettimely.com/Booking/Location/bodyimagebeautysalons";
+	var url  = "https://book.gettimely.com/Booking/Location/bodyimagebeautysalons";
 	ajaxRequest(guid, url, "POST", "ResellerCode=&OnlineBookingGuid=" + guid + "&LocationId=5875", true, request30MinuteTreatment)
 }
 
 function request30MinuteTreatment(guid)
 {
-	var url  = "http://book.gettimely.com/Booking/Service?obg=" + guid;
+	var url  = "https://book.gettimely.com/Booking/Service?obg=" + guid;
 	ajaxRequest(guid, url, "POST", "OnlineBookingMultiServiceEnabled=True&LocationId=0&ServiceIds=" + thirtyMinuteTreatmentId, true, getAvailableDatesForTreatment);
 }
 
@@ -89,7 +89,7 @@ function getAvailableDatesForTreatment(guid)
 {
 	var theMonth = new Date().getMonth() + 1;
 	var theYear = new Date().getFullYear();
-	var url  = "http://book.gettimely.com/Booking/GetOpenDates?obg=" + guid + "&month=" + theMonth + "&year=" + theYear + "&staffId=" + kerrieId;
+	var url  = "https://book.gettimely.com/Booking/GetOpenDates?obg=" + guid + "&month=" + theMonth + "&year=" + theYear + "&staffId=" + kerrieId;
 	ajaxRequest(guid, url, "GET", "", true, getTodaysBookings)
 }
 
@@ -100,7 +100,7 @@ function getTodaysBookings(guid, availableSlots)
 	var theMonth = ("00" + (d.getMonth()+1)).slice(-2);
 	var theYear = d.getFullYear();
 	console.log(theDay + "/" + theMonth + "/" + theYear);
-	var url  = "http://book.gettimely.com/booking/gettimeslots/?obg=" + guid + "&dateSelected=" + theYear + "-" + theMonth + "-" + theDay + "&staffId=" + kerrieId + "&tzName=Europe/London&tzId=";
+	var url  = "https://book.gettimely.com/booking/gettimeslots/?obg=" + guid + "&dateSelected=" + theYear + "-" + theMonth + "-" + theDay + "&staffId=" + kerrieId + "&tzName=Europe/London&tzId=";
 	ajaxRequest(guid, url, "GET", "", true, parseResponse, 0)
 }
 
@@ -114,7 +114,7 @@ function getNextSevenDaysBookings(guid)
 		var theMonth = ("00" + (d.getMonth()+1)).slice(-2);
 		var theYear = d.getFullYear();
 		console.log(theDay + "/" + theMonth + "/" + theYear);
-		var url  = "http://book.gettimely.com/booking/gettimeslots/?obg=" + guid + "&dateSelected=" + theYear + "-" + theMonth + "-" + theDay + "&staffId=" + kerrieId + "&tzName=Europe/London&tzId=";
+		var url  = "https://book.gettimely.com/booking/gettimeslots/?obg=" + guid + "&dateSelected=" + theYear + "-" + theMonth + "-" + theDay + "&staffId=" + kerrieId + "&tzName=Europe/London&tzId=";
 		ajaxRequest(guid, url, "GET", "", true, parseResponse, daysAhead)
 		daysAhead++;
 	}
