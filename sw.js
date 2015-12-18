@@ -1,9 +1,9 @@
 var version = "4.0::";
 var offlineResources = [
-	"./offline/index.html",
-	"./img/logo.png",
-	"./css/index.css",
-	"./js/index.js"
+	"/KerrieWorking-WebApp/offline/index.html",
+	"/KerrieWorking-WebApp/img/logo.png",
+	"/KerrieWorking-WebApp/css/index.css",
+	"/KerrieWorking-WebApp/js/index.js"
 ];
 self.addEventListener("install", function(event) {
 	console.log("install from service worker");
