@@ -59,10 +59,11 @@ self.addEventListener("fetch", function(event) {
 					return response;
 				})
 				.catch(function() {
-					return caches.match(request)
-						.then(function(response) {
-							return response || caches.match("/offline/");
-						});
+					return caches.match("/KerrieWorking-WebApp/offline/index.html");
+//					return caches.match(request)
+//						.then(function(response) {
+//							return response || caches.match("/offline/");
+//						});
 				})
 		);
 		return;
