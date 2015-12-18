@@ -1,6 +1,7 @@
 var version = "4.0::";
 var offlineResources = [
 	"/KerrieWorking-WebApp/offline/index.html",
+	"/KerrieWorking-WebApp/offline/logo.png",
 	"/KerrieWorking-WebApp/img/logo.png",
 	"/KerrieWorking-WebApp/css/index.css",
 	"/KerrieWorking-WebApp/js/index.js"
