@@ -1,9 +1,9 @@
 var version = "4.0::";
 var offlineResources = [
-	"/offline/index.html",
-	"/img/logo.png",
-	"/css/index.css",
-	"/js/index.js"
+	"./offline/index.html",
+	"./img/logo.png",
+	"./css/index.css",
+	"./js/index.js"
 ];
 self.addEventListener("install", function(event) {
 	console.log("install from service worker");
