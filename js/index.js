@@ -132,11 +132,13 @@ function test()
 function setSpinning()
 {
 $("span").addClass("glyphicon-refresh-animate");
+document.getElementById('output').innerHTML = "Retrieving data from multiple sources and coalescing.  Please wait...";
 }
 
 function stopSpinning()
 {
 $("span").removeClass("glyphicon-refresh-animate");
+document.getElementById('output').innerHTML = "";
 }
 
 function parseResponse(guid, response, parseDaysAhead)
