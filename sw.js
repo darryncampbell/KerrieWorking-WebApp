@@ -41,9 +41,9 @@ self.addEventListener("fetch", function(event) {
 	var url = new URL(request.url);
 
 	// Only worry about GET requests and certain domains
-	if (request.method !== "GET" || !isOfflineOrigin(url.origin)) {
-		return;
-	}
+//	if (request.method !== "GET" || !isOfflineOrigin(url.origin)) {
+//		return;
+//	}
 
 	// For HTML try the network first, fall back to the cache, and then
 	// finally the offline page
