@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!--link rel="stylesheet" type="text/css" href="css/index.css" /-->
+        <title>Kerrie Working Hours</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<style type="text/css">
+	.list-group{
+//		width: 200px;
+		text-align: center;
+	}
+    .bs-example{
+    	margin: 20px;
+    }
+	.glyphicon-refresh-animate {
+    -animation: spin .7s infinite linear;
+    -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+</style>
+		<script>
+
+
+
+</script>
+		
+    </head>
+    <body>
+        <div class="app">
+<!--script type="text/javascript" src="cordova.js"></script-->
+<script type="text/javascript" src="js/index.js"></script>
+
+<div class="page-header"><H1>Kerrie's Schedule</H1></div>
+<P>
+<button onclick="javascript:refreshData()" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-refresh"></span> Refresh</button>
+<div id="output"></div>
+<div id="day0Heading"></div>
+<div id="day0Content"></div>
+<div id="day1Heading"></div>
+<div id="day1Content"></div>
+<div id="day2Heading"></div>
+<div id="day2Content"></div>
+<div id="day3Heading"></div>
+<div id="day3Content"></div>
+<div id="day4Heading"></div>
+<div id="day4Content"></div>
+<div id="day5Heading"></div>
+<div id="day5Content"></div>
+<div id="day6Heading"></div>
+<div id="day6Content"></div>
+<div id="day7Heading"></div>
+<div id="day7Content"></div>
+<div id="day8Heading"></div>
+<div id="day8Content"></div>
+    </body>
+</html>
