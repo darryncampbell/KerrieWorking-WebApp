@@ -47,7 +47,7 @@ self.addEventListener("fetch", function(event) {
 
 	// For HTML try the network first, fall back to the cache, and then
 	// finally the offline page
-	if (request.headers.get("Accept").indexOf("text/html") !== -1) {
+	//if (request.headers.get("Accept").indexOf("text/html") !== -1) {
 		event.respondWith(
 			fetch(request)
 				.then(function(response) {
@@ -66,14 +66,15 @@ self.addEventListener("fetch", function(event) {
 				})
 		);
 		return;
-	}
+	//}
 
 	// For non-HTML requests look in the cache first, and fall back to
 	// the network
-	event.respondWith(
+	/*event.respondWith(
 		caches.match(request)
 			.then(function(response) {
 				return response || fetch(request);
 			})
 	);
+	*/
 });
